@@ -9,7 +9,7 @@ include "display.php";
  <!DOCTYPE html>
 <html>
 <head>
-<title>DetteCourseColoc</title>
+<title>Titre</title>
 </head>
 <body>
 <header>
