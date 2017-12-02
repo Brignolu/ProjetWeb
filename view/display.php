@@ -1,17 +1,6 @@
 <?php
 function display_home(){
-	echo"
-		<div class='wrapper' div='body-wrapper'>
-		<div id='extra' class='container'>
-			<div class='title'>
-				<h2>Openfive</h2> <h3>c'est quoi?<h3>
-			 </div>
-			<ul class='actions'>
-				<li><a href='index.php?subform=streamer'><input type='button' id='control_button' onclick='update()' value='inscription' class='button'></a></li>
-			</ul>
-		</div>
-	</div>
-	";
+	require ("pages/home.php");
 }
 
 //se sert de la variable de session
