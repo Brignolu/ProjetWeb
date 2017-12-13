@@ -1,18 +1,25 @@
 <?php
-//direction de base
+
+// Direction de base ---------------------------------------------------------------------------------------------------
+
 $page ="home";
 
-//script de connection et l'inscription
+
+// Script de connection ------------------------------------------------------------------------------------------------
+// et d'inscription ----------------------------------------------------------------------------------------------------
+
 if(isset($_GET["ac"])){
 	if($_GET["ac"]=="signin"){
-		if(user_signin($_POST["pseudo"], $_POST["password"], $c, $encryption_key)){
+		if(user_signin($_POST[ "pseudo"], $_POST["password"], $c, $encryption_key)){
 		}
 		else{
 			$page = "connection_failed";
 		}
 	}
-	//incription et connection automatique
-	if($_GET["ac"]=="signup"){
+
+	// Incription et connection automatique ----------------------------------------------------------------------------
+
+    if($_GET["ac"]=="signup"){
 		if(user_signup($_POST["fname"], $_POST["lname"], $_POST["adressepostal"], $_POST["codepostal"], $_POST["ville"], $_POST["email"], $_POST["password"], $_POST["tel"], $c, $encryption_key)){
 			user_signin($_POST["email"], $_POST["password"], $c, $encryption_key);
 
@@ -21,47 +28,74 @@ if(isset($_GET["ac"])){
 			$page = "sub_failed";
 		}
 	}
-		//test de la reservation
-	if($_GET["ac"]=="reserv"){
+
+	// Test de la reservation ------------------------------------------------------------------------------------------
+
+    if($_GET["ac"]=="reserv"){
 		if(user_reserv($_POST["fnameenfant"], $_POST["lnameenfant"], $_POST["age"], $_POST["date"], $_POST["creneau"], $c, $encryption_key)){
 		}
 		else {
 			$page = "reserv_failed";
 		}
 	}
+    if($_GET["ac"]=="hall-form"){
+        if(user_reserv($_POST["fnameenfant"], $_POST["lnameenfant"], $_POST["age"], $_POST["date"], $_POST["creneau"], $c, $encryption_key)){
+        }
+        else {
+            $page = "reserv_failed";
+        }
+    }
 
 }
 
 
-//vérification si le user est enregister
+// Vérification si le user est enregister
 
-if(isset($_SESSION['stats']) and $page != "connection_failed" and
-	$page != "sub_failed"){
-	if(isset($_SESSION['pseudo'])){
-			$page ="user_log";
-	}
-	else{
-		$page ="home";
-	}
+if(isset($_SESSION['stats']) and $page != "connection_failed" and $page != "sub_failed"){
+    $page = "home";
+
+    if(isset($_GET["user_log"])){
+        $page = "user_log";
+    }
 }
-else
-{
-	$_SESSION['stats']="new_user";
+else {
+	$_SESSION['stats'] = "new_user";
 }
 
 
+// Formulaire d'incription
 
-//formulaire d'incription
 if(isset($_GET["subform"])){
-    $page="user_sub";
+    $page = "user_sub";
 }
-//formulaire d'incription
+
+// Page A propos
+
+if(isset($_GET["propos"])){
+    $page = "propos";
+}
+
+// Page Attraction
+
+if(isset($_GET["attraction"])){
+    $page = "attraction";
+}
+
+//formulaire de reservation
 if(isset($_GET["reservform"])){
-    $page="user_reserv";
+    if($_GET["reservform"] == "reserv"){
+        $formules = recup_formule($c, $encryption_key);
+        $page = "user_reserv";
+    }
+    if($_GET["reservform"] == "hall-select"){
+        $salles = recup_hall($c, $encryption_key);
+        $page = "hall-select";
+    }
 }
+
 //formulaire de modification d'information
 if(isset($_GET["infoform"])){
-    $page="update_info_form";
+    $page = "update_info_form";
 }
 
 
