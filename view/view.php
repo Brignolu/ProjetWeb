@@ -1,4 +1,5 @@
 <?php
+var_dump($page);
 if($page =="home"){
 	display_home();
 }
@@ -21,6 +22,11 @@ elseif ( ($page =="user_reserv")) {
 
 elseif ( ($page =="hall-select")) {
     display_hall_select($salles);
+
+}
+
+elseif ( ($page =="reserv_sucess")) {
+    display_user_log($_SESSION['pseudo'],$_SESSION['mail']);
 
 }
 elseif ( ($page =="reserv_failed")) {

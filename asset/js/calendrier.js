@@ -55,8 +55,8 @@ function ds_echo(t) {
 var ds_element; // Text Element...
 
 var ds_monthnames = [
-    'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
-    'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+    'Janvier', 'F?vrier', 'Mars', 'Avril', 'Mai', 'Juin',
+    'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'D?cembre'
 ]; // You can translate it for your language.
 
 var ds_daynames = [
@@ -101,7 +101,7 @@ function ds_template_day(d, m, y) {
         '<tr> ' +
         '<td id="' + d + '/' + m + '/' + y + '/' + '10' + '" onclick="cs_onclick(10,' + d + ',' + m + ',' + y + ')" class="ds_cell">10h</td> ' +
         '<td id="' + d + '/' + m + '/' + y + '/' + '13' + '" onclick="cs_onclick(13,' + d + ',' + m + ',' + y + ')" class="ds_cell">13h</td> ' +
-        '<td id="' + d + '/' + m + '/' + y + '/' + '15' + '" value="ok" onclick="cs_onclick(15,' + d + ',' + m + ',' + y + ')" class="ds_cell">15h</td> ' +
+        '<td id="' + d + '/' + m + '/' + y + '/' + '15' + '" onclick="cs_onclick(15,' + d + ',' + m + ',' + y + ')" class="ds_cell">15h</td> ' +
         '<td id="' + d + '/' + m + '/' + y + '/' + '17' + '" onclick="cs_onclick(17,' + d + ',' + m + ',' + y + ')" class="ds_cell">17h</td> ' +
         '</tr> ' +
         '</table> ' +
@@ -166,15 +166,17 @@ function ds_draw_calendar(m, y) {
     disable_creneau();
 
 
+
 }
 
 
 function disable_creneau(){
     for (i = 0; i < Reservs.length; i++) {
-        document.getElementById(Reservs[i][3]+'/'+Reservs[i][2]+'/'+Reservs[i][1]+'/'+Reservs[i][4]).style.backgroundColor = "red";
-        document.getElementById(Reservs[i][3]+'/'+Reservs[i][2]+'/'+Reservs[i][1]+'/'+Reservs[i][4]).removeAttribute = "onclick";
+        if(document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]) != null) {
+            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).style.backgroundColor = "red";
+            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).removeAttribute = "onclick";
 
-
+        }
     }
 }
 
@@ -215,6 +217,7 @@ function ds_nm() {
     }
     // Redraw the calendar.
     ds_draw_calendar(ds_c_month, ds_c_year);
+
 }
 
 // Moves to the previous month...
@@ -228,12 +231,14 @@ function ds_pm() {
     }
     // Redraw the calendar.
     ds_draw_calendar(ds_c_month, ds_c_year);
+
 }
 
 // Moves to the next year...
 function ds_ny() {
     ds_c_year++; // Increase the current year.
     ds_draw_calendar(ds_c_month, ds_c_year); // Redraw the calendar.
+
 }
 
 // Moves to the previous year...
@@ -241,6 +246,7 @@ function ds_py() {
     // Decrease the current year.
     ds_c_year = ds_c_year - 1;               // Can't use dash-dash here, it will make the page invalid.
     ds_draw_calendar(ds_c_month, ds_c_year); // Redraw the calendar.
+;
 }
 
 // Format the date to output.

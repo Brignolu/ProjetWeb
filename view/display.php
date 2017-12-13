@@ -19,16 +19,20 @@ function display_attraction(){
 }
 
 function display_user_session(){
+    if(isset($_SESSION['stats'])) {
+        if ($_SESSION['stats'] == "login-done") {
 
-	if($_SESSION['stats']=="login-done"){
+            require("pages/user_session_true.php");
 
-	    require ("pages/user_session_true.php");
+        } else {
 
-	}else{
+            require("pages/user_session_false.php");
 
-		require ("pages/user_session_false.php");
-
-	}
+        }
+    }
+    else {
+        require("pages/user_session_false.php");
+    }
 }
 
 function display_signin_failed(){
