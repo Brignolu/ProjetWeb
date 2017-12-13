@@ -2,7 +2,13 @@
 if($page =="home"){
 	display_home();
 }
-var_dump($page);
+elseif($page == "propos"){
+    display_apropos();
+}
+
+elseif($page == "attraction"){
+    display_attraction();
+}
 if($page =="user_log"){
 	display_user_log($_SESSION['pseudo'],$_SESSION['mail']);
 }  elseif ( ($page =="user_sub")) {

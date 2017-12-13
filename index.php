@@ -10,8 +10,6 @@ include("modele/reserv.php");
 include("controller/controller.php");
 include("view/display.php");
 include("view/display_user.php");
-include("view/head.php");
+include("view/header.php");
 include("view/view.php");
-include("view/foot.php");
-
-?>
+include("view/footer.php");

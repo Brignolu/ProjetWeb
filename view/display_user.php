@@ -1,35 +1,9 @@
 <?php
 //formulaire de d'inscription streamer
 function display_user_sub(){
-	echo"
-		<div class='wrapper' div='body-wrapper'>
-		        <div id='extra' class='container'>
-		            <form action='index.php?ac=signup' method='post'>
-		                <div class='div_menu_line'>
-		                    <div id='three-column'>
-		                        <div class='boxalone'>
-		                            <div class='box'> <span class='fa fa-user'></span>
-		                                <input type='text' name='email' placeholder='adresse e-mail' required/>
-		                                <input type='password' placeholder='mot de passe' name='password' required/>
-		                                <input type='text' placeholder='Prenom' name='fname' required/>
-		                                <input type='text' placeholder='Nom' name='lname' required/>
-		                                <input type='text' placeholder='telephone' name='tel' required/>
-		                                <input type='text' placeholder='addresse' name='adressepostal' required/>
-		                                <input type='text' placeholder='code postal' name='codepostal' required/>
-		                                <input type='text' placeholder='Ville' name='ville' required/>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class='div_menu_line'>
-		                <ul class='actions'>
-		                    <li><input type='submit' class='button'  value='valider' name='Inscription'></li>
-		                </ul>
-		                </div>
-		            </form>
-		        </div>
-		    </div>
-		";
+
+    require ("pages/user_sub.php");
+
 }
 //formulaire de reservation
 function display_user_reserv($salle, $formules, $reservs){

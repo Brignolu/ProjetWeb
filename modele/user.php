@@ -7,9 +7,9 @@ function user_signin($pseudo, $password, $c, $encryption_key) {
 //récupération des compte streamer
 	//cryptage du password
 	//$password = crypt($password,$encryption_key);
-	$sql = ("SELECT * FROM users WHERE email='$pseudo' AND password='$password'"); 
+	$sql = ("SELECT * FROM users WHERE email='$pseudo' AND password='$password'");
 	$result = mysqli_query($c,$sql);
-	
+
 	//test des résultat
 	if($row = mysqli_fetch_row($result)){
 		if (isset($row[0])) {
