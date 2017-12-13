@@ -45,25 +45,11 @@ function user_signup($fname, $lname, $adressepostal, $codepostal, $ville , $emai
 	}
 }
 
-//script de reservation pour les user
-//ajoute dans la bdd les valeurs
-//renvoi true si la connection a fonctionné sinon false
-function user_reserv($fnameenfant, $lnameenfant, $age, $date, $creneau , $c, $encryption_key) {
-	//cryptage du password
-	//$password = crypt($password,$encryption_key);
-	//insertion des valeurs dans la bdd
-	$sql = ("INSERT INTO reservation(iduser, idattraction, fnameenfant, lnameenfant, age, reservdate, creneau) VALUES('$date','$creneau' ,'$fnameenfant', '$lnameenfant', '$age', '$date', '$creneau')");
-	if(mysqli_query($c,$sql)){
-		return true;
-	}
-	else{
-		return false;
-	}
-}
 
 
 
-function streamer_logout() {
+
+function user_logout() {
 	$_SESSION = array();
 	unset ($_SESSION['stats']);
 }

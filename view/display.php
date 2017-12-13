@@ -1,12 +1,23 @@
 <?php
 function display_home(){
-	require ("pages/home.php");
+	echo"
+		<div class='wrapper' div='body-wrapper'>
+		<div id='extra' class='container'>
+			<div class='title'>
+				<h2>Openfive</h2> <h3>c'est quoi?<h3>
+			 </div>
+			<ul class='actions'>
+				<li><a href='index.php?subform=streamer'><input type='button' id='control_button' onclick='update()' value='inscription' class='button'></a></li>
+			</ul>
+		</div>
+	</div>
+	";
 }
 
 //se sert de la variable de session
 //affiche les variable de session
 function display_user_session(){
-	if($_SESSION['stats']=="login-done"){
+	if(isset($_SESSION['id'])){
 		echo "
 			<div class='wrapper'>
 				<div id='header-wrapper'>
@@ -20,9 +31,8 @@ function display_user_session(){
 									<li><input type='text' class='text_input' name='pseudo' placeholder='".$_SESSION['pseudo']."' disabled></li>
 									<li><a href='index.php'><input type='text' class='text_input' name='password' placeholder='espace perso' disabled></a></li>
 									<li><a href='index.php?logout=disc'><input type='button' class='button'  value='déconnection' name='logout'></a></li>
-									<li><a href='index.php?reservform=reserv' title=''><input type='button' class='button'  value='reservation' name='subscribe'></a></li>
+									<li><a href='index.php?reservform=hall-select' title=''><input type='button' class='button'  value='reservation' name='subscribe'></a></li>
 										
-									</a></li>
 
 							</ul>
 						</div>
