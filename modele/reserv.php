@@ -6,12 +6,11 @@ function recup_all_reserv($c, $encryption_key){
     $reservations= array ();
     while ($donnees = mysqli_fetch_assoc($result))
     {
-        $reservations[$loop][0]= $donnees['id'];
         $date=explode("-",$donnees['reservdate']);
-        $reservations[$loop][1]=$date[0];
-        $reservations[$loop][2]=$date[1];
-        $reservations[$loop][3]=$date[2];
-        $reservations[$loop][4]= $donnees['creneau'];
+        $reservations[$loop][0]=ltrim($date[0],"0");
+        $reservations[$loop][1]=ltrim($date[1], "0");
+        $reservations[$loop][2]=ltrim($date[2], "0");
+        $reservations[$loop][3]= $donnees['creneau'];
         $loop++;
     }
     return $reservations;
