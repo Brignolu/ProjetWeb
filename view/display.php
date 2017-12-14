@@ -35,6 +35,12 @@ function display_user_session(){
     }
 }
 
+function display_signin_success(){
+
+    require ("pages/signin_success.php");
+
+}
+
 function display_signin_failed(){
 
 	require ("pages/signin_failed.php");

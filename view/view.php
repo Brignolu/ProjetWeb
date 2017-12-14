@@ -1,45 +1,43 @@
 <?php
-var_dump($page);
-if($page =="home"){
-	display_home();
+
+if ($page == "home") {
+    display_home();
 }
-elseif($page == "propos"){
+elseif ($page == "propos") {
     display_apropos();
 }
-
-elseif($page == "attraction"){
+elseif ($page == "attraction") {
     display_attraction();
 }
-if($page =="user_log"){
-	display_user_log($_SESSION['pseudo'],$_SESSION['mail']);
-}  elseif ( ($page =="user_sub")) {
-	display_user_sub();	
+if ($page == "user_log") {
+    display_user_log($_SESSION['pseudo'], $_SESSION['mail']);
 }
-
-elseif ( ($page =="user_reserv")) {
-	display_user_reserv($salle, $formules, $reservs);
+elseif (($page == "user_sub")) {
+    display_user_sub();
 }
-
-elseif ( ($page =="hall-select")) {
+elseif (($page == "user_reserv")) {
+    display_user_reserv($salle, $formules, $reservs);
+}
+elseif (($page == "hall_select")) {
     display_hall_select($salles);
-
 }
-
-elseif ( ($page =="reserv_sucess")) {
-    display_user_log($_SESSION['pseudo'],$_SESSION['mail']);
-
+elseif (($page == "reserv_sucess")) {
+    display_user_log($_SESSION['pseudo'], $_SESSION['mail']);
 }
-elseif ( ($page =="reserv_failed")) {
-	display_reserv_failed();	
+elseif (($page == "reserv_failed")) {
+    display_reserv_failed();
 }
- elseif ( ($page =="connection_failed")) {
-	display_signin_failed();
-} 
-elseif ( ($page =="sub_failed")) {
-	display_signup_failed();
+elseif (($page == "connection_success")) {
+    display_signin_success();
 }
-elseif ( ($page =="update_info_form")) {
-	update_info_form($_SESSION['id'], $_SESSION['pseudo'], $_SESSION['twitch'], $_SESSION['mail'], $_SESSION['workername']);
+elseif (($page == "connection_failed")) {
+    display_signin_failed();
+}
+elseif (($page == "sub_failed")) {
+    display_signup_failed();
+}
+elseif (($page == "update_info_form")) {
+    update_info_form($_SESSION['id'], $_SESSION['pseudo'], $_SESSION['twitch'], $_SESSION['mail'], $_SESSION['workername']);
 }
 
 

@@ -19,7 +19,6 @@ body {
     background: -webkit-linear-gradient(-45deg, rgba(255,78,0,1) 0%,rgba(229,19,86,1) 100%);
     background: linear-gradient(135deg, rgba(168,78,0,1) 0%,rgba(100,64,143,1) 100%);
     font-size: 15px;
-    height: 100vh;
 }
 
 a {
@@ -266,7 +265,6 @@ a {
 }
 
 .of-main-form {
-    width: 130px;
     margin: 0 auto;
 }
 
@@ -302,8 +300,26 @@ a {
 
 }
 
+.of-main-button-item {
+    text-transform: uppercase;
+    border: 1px solid black;
+    border-radius: 4px;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    color: red;
+    background: #fff;
+    -webkit-transition: background .25s ease-in-out, color .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out, color .25s ease-in-out;
+    transition: background .25s ease-in-out, color .25s ease-in-out;
+}
+
 .of-main-button-item:hover {
-    background: gray;
+    background-color: #FFD;
     color: #000;
 }
 

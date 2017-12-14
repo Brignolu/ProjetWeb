@@ -3,31 +3,88 @@
     <h2 class="of-main-title2">Réservation :</h2>
 
     <div class="of-main-form">
-        <form action='index.php?ac=reserv' method='post'>
+        <form action="index.php?ac=reserv" method="post">
             <ul>
+
                 <li class="of-main-form-item-link">
-                    <input type='text' name='fnameenfant' placeholder='Prenom de lenfant' required/>
+                    <select id="select" name="formule" oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
+
+                        <?php
+                        var_dump($salle);
+                        foreach ($formules as $formule) {
+                          echo "<option id='" . $formule[0] . "'>
+                                " . $formule[1] . "
+                            </option>";
+
+                        }
+                        ?>
+
+                    </select>
                 </li>
 
                 <li class="of-main-form-item-link">
-                    <input type='text' placeholder='Nom de lenfant' name='lnameenfant' required/>
+                    <input type="text" placeholder="Prénom de l'enfant" name="fnameenfant" required/>
                 </li>
 
                 <li class="of-main-form-item-link">
-                    <input type='number' placeholder='age de lenfant le jour de l'anniversaire' name='age' min='1' max ='13' required/>
+                    <input type="text" placeholder="Nom de l'enfant" name="lnameenfant" required/>
                 </li>
 
                 <li class="of-main-form-item-link">
-                    <input type='text' placeholder='date' name='date' required/>
+                    <input type="number" placeholder="Age le jour de l'anniversiare" name="age" min="1" max="13" required/>
                 </li>
 
                 <li class="of-main-form-item-link">
-                    <input type='text' placeholder='Creneau' name='creneau' required/>
+                    <input type="text" placeholder="Date" name="date" onclick="ds_sh(this)" required/>
                 </li>
 
                 <li class="of-main-form-item-link">
-                    <input type='submit' class='button'  value='valider' name='subscribe'>
+                    <input type="text" placeholder="Creneau" name="creneau" id="creneau" value="" required/>
                 </li>
+
+                <li class="of-main-form-item-link">
+                    <input placeholder="Nombre d'enfant supplémentaire" id="enfant" type="number" name="childnb" oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
+                </li>
+
+                <li class="of-main-form-item-link">
+                    <input placeholder="Nombre d'adultes supplémentaire" id="adult" type="number" name="adultnb" oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" >
+                </li>
+
+                <li class="of-main-form-item-link">
+                    <input placeholder="Boisson Supplémentaire" id="drink" type="number" name="drinknb" oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" >
+                </li>
+
+                <li class="of-main-form-item-link">
+                    <input placeholder="Voulez-vous un gateau supplémentaires?" id="cake" type="number" name="cakenb" oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" >
+                </li>
+
+                <li class="of-main-form-item-link">
+                    <p>prix total</p>
+                    <input type='text' id='cost_result' value='0'>
+                </li>
+
+                <li class="of-main-form-item-link">
+                    <input type="submit" class="button" value="valider" name="subscribe" id="submit_button">
+                </li>
+
+                <li>
+                    <input type='hidden' id='idformule' name='idformule' value='0'>
+                </li>
+
+                <li>
+                    <input type='hidden' id='idsalle' name='idsalle' value='" . $salle[0] . "'>
+                </li>
+
+                <li>
+                    <table class='ds_box' cellpadding='0' cellspacing='0' id='ds_conclass' style=' display: none;'>
+                        <tr>
+                            <td id='ds_calclass'></td>
+                        </tr>
+                    </table>
+                </li>
+
+
+                </div>
             </ul>
         </form>
     </div>

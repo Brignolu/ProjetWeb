@@ -18,7 +18,7 @@
             </li>
 
             <li class="of-main-form-item">
-                <input class="of-main-form-item-link" type="text" placeholder='Telephone' name='tel' required/>
+                <input class="of-main-form-item-link" type="tel" placeholder='Telephone' name='tel' required/>
             </li>
 
             <li class="of-main-form-item">
@@ -32,11 +32,12 @@
             <li class="of-main-form-item">
                 <input class="of-main-form-item-link" type="text" placeholder='Ville' name='ville' required/>
             </li>
+
+            <li class="of-main-form-item">
+                <button type='submit' class='of-main-button-item' name='Inscription'>
+                    Valider
+                </button>
+            </li>
         </ul>
-
-        <button type='submit' class='of-main-button-item' name='Inscription'>
-            Valider
-        </button>
-
     </form>
 </div>

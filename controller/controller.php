@@ -68,14 +68,14 @@ if(isset($_GET["attraction"])){
 //formulaire de reservation
 if(isset($_GET["reservform"])){
     if($_GET["reservform"]=="reserv"){
-        $formules=recup_formule($c, $encryption_key);
-        $salle=recup_hall_by_id($_POST['hall-choice'], $c, $encryption_key);
-        $reservs=recup_all_reserv($c, $encryption_key);
+        $formules = recup_formule($c, $encryption_key);
+        $salle = recup_hall_by_id($_POST['hall-choice'], $c, $encryption_key);
+        $reservs = recup_all_reserv($c, $encryption_key);
         $page="user_reserv";
     }
-    if($_GET["reservform"]=="hall-select"){
+    if($_GET["reservform"]=="hall_select"){
         $salles=recup_all_hall($c, $encryption_key);
-        $page="hall-select";
+        $page="hall_select";
     }
 }
 

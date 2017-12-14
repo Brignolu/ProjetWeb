@@ -40,7 +40,7 @@
                 </li>
 
                 <li class="of-header-nav-item">
-                    <a href="index.php?reservform=hall-select" class="of-header-nav-item-href of-header-nav-item-right">
+                    <a href="index.php?reservform=hall_select" class="of-header-nav-item-href of-header-nav-item-right">
                         Reservation
                     </a>
                 </li>
