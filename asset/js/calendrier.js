@@ -93,21 +93,42 @@ function ds_template_blank_cell(colspan) {
 }
 
 function ds_template_day(d, m, y) {
-    return '<td class="ds_cell"> ' +
+
+    var total =
+        '<td class="ds_cell"> ' +
         '<table> ' +
         '<tr> ' +
         '<td id="' + d + '/' + m + '/' + y + '" class="ds_cell"> ' + d + '</td> ' +
         '</tr> ' +
-        '<tr> ' +
-        '<td id="' + d + '/' + m + '/' + y + '/' + '10' + '" onclick="cs_onclick(10,' + d + ',' + m + ',' + y + ')" class="ds_cell">10h</td> ' +
-        '<td id="' + d + '/' + m + '/' + y + '/' + '13' + '" onclick="cs_onclick(13,' + d + ',' + m + ',' + y + ')" class="ds_cell">13h</td> ' +
-        '<td id="' + d + '/' + m + '/' + y + '/' + '15' + '" onclick="cs_onclick(15,' + d + ',' + m + ',' + y + ')" class="ds_cell">15h</td> ' +
-        '<td id="' + d + '/' + m + '/' + y + '/' + '17' + '" onclick="cs_onclick(17,' + d + ',' + m + ',' + y + ')" class="ds_cell">17h</td> ' +
-        '</tr> ' +
+        '<tr> ';
+        for (var i = 0; i < Creneau.length; i++) {
+            total = total + ds_template_creneau(Creneau[i] ,d, m, y)
+
+
+        }
+        total = total +'</tr> ' +
         '</table> ' +
         '</td>';
+        return total
     // Define width the day row.
 
+
+}
+function ds_template_creneau(c, d, m, y) {
+    var test = 0;
+    for (var i = 0; i < Reservs.length; i++) {
+        if ((y + '/' + m + '/' + d + '/' + c) == Reservs[i]) {
+
+            test = 1;
+        }
+
+    }
+    if (test ==0){
+
+        return '<td id="' + d + '/' + m + '/' + y + '/' + c + '" onclick="cs_onclick(' + c + ',' + d + ',' + m + ',' + y + ')" class="ds_cell">'+c+'</td> ';
+
+    }
+    else return '<td id="' + d + '/' + m + '/' + y + '/' + c + '"  class="ds_cell" style="background-color: red">'+c+'</td> ';
 
 }
 
@@ -163,23 +184,12 @@ function ds_draw_calendar(m, y) {
     ds_echo (ds_template_main_below()); // Do the footer
     ds_ob_flush();                      // And let's display..
     ds_ce.scrollIntoView();             // Scroll it into view.
-    disable_creneau();
+
 
 
 
 }
 
-
-function disable_creneau(){
-    for (i = 0; i < Reservs.length; i++) {
-        if(document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]) != null) {
-            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).style.backgroundColor = "red";
-            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).style.cursor = "default";
-            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).removeAttr = "onclick";
-
-        }
-    }
-}
 
 // A function to show the calendar.
 // When user click on the date, it will set the content of t.

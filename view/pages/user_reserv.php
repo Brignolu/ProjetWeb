@@ -72,7 +72,7 @@
                 </li>
 
                 <li>
-                    <input type='hidden' id='idsalle' name='idsalle' value='" . $salle[0] . "'>
+                    <input type='hidden' id='idsalle' name='idsalle' value='<?php echo $salle[0]; ?>'>
                 </li>
 
                 <li>
