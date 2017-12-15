@@ -1,42 +1,29 @@
 <div class="of-container of-main">
     <div class="of-main-1">
+
         <h2 class="of-main-title-h2">
-            dhgdf
+            Nous Trouver :
         </h2>
 
         <p class="of-main-corps">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi, dicta distinctio ducimus est iusto, laboriosam libero nulla odit placeat quam quas ratione repellendus rerum voluptates! Aspernatur est molestiae omnis?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi, dicta distinctio ducimus est iusto, laboriosam libero nulla odit placeat quam quas ratione repellendus rerum voluptates! Aspernatur est molestiae omnis?
-        </p>
-
-        <h2 class="of-main-title-h2">
-            dfhdfh
-        </h2>
-
-        <p class="of-main-corps">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi, dicta distinctio ducimus est iusto, laboriosam libero nulla odit placeat quam quas ratione repellendus rerum voluptates! Aspernatur est molestiae omnis?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi, dicta distinctio ducimus est iusto, laboriosam libero nulla odit placeat quam quas ratione repellendus rerum voluptates! Aspernatur est molestiae omnis?
+            <iframe class="of-main-corps-api" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.3061404290406!2d6.269453715325658!3d46.18446627911607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c720273bbe39d%3A0xbbf01619779279bb!2s10+All%C3%A9e+des+Ch%C3%AAnes%2C+74100+V%C3%A9traz-Monthoux!5e0!3m2!1sen!2sfr!4v1513241827260"
+                    width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
         </p>
     </div>
 
     <div class="of-main-2">
+
         <h2 class="of-main-title-h2">
-            dfh
+            Contact :
         </h2>
 
         <p class="of-main-corps">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi, dicta distinctio ducimus est iusto, laboriosam libero nulla odit placeat quam quas ratione repellendus rerum voluptates! Aspernatur est molestiae omnis?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi, dicta distinctio ducimus est iusto, laboriosam libero nulla odit placeat quam quas ratione repellendus rerum voluptates! Aspernatur est molestiae omnis?
+            <ul>
+                <li> Contact@parctortuga.fr</li>
+                <li> +3345003030303</li>
+            </ul>
         </p>
 
-        <h2 class="of-main-title-h2">
-            dfh
-        </h2>
-
-        <p class="of-main-corps">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto esse excepturi repudiandae sed veniam! Ab accusantium aliquam assumenda cupiditate dicta dignissimos dolorem, harum magni natus nulla quam quos reprehenderit, veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto esse excepturi repudiandae sed veniam! Ab accusantium aliquam assumenda cupiditate dicta dignissimos dolorem, harum magni natus nulla quam quos reprehenderit, veritatis!
-        </p>
     </div>
 
 </div>

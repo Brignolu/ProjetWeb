@@ -82,9 +82,6 @@
                         </tr>
                     </table>
                 </li>
-
-
-                </div>
             </ul>
         </form>
     </div>
