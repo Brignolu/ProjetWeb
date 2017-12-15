@@ -1,10 +1,6 @@
 <div class="of-container of-header">
 
-    <h1 class="of-header-title">
-
-        <a href="index.php?home" class="of-header-title-item">OpenFive</a>
-
-    </h1>
+    <img class="of-header-logo" src="asset/img/Logo.png" alt="Logo Openfive">
 
     <div class="of-header-nav">
         <form action="index.php?ac=signin" method="post">

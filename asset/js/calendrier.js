@@ -174,7 +174,8 @@ function disable_creneau(){
     for (i = 0; i < Reservs.length; i++) {
         if(document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]) != null) {
             document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).style.backgroundColor = "red";
-            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).removeAttribute = "onclick";
+            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).style.cursor = "default";
+            document.getElementById(Reservs[i][3] + '/' + Reservs[i][2] + '/' + Reservs[i][1] + '/' + Reservs[i][4]).removeAttr = "onclick";
 
         }
     }

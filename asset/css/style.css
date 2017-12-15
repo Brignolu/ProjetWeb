@@ -53,6 +53,15 @@ a {
     padding-top: 50px;
 }
 
+.of-header-logo {
+    width: 150px;
+    height: 140px;
+    z-index: 1;
+    top: 10px;
+    left: 100px;
+    position: absolute;
+}
+
 .of-header-title {
     text-transform: uppercase;
     line-height: 50px;
@@ -80,27 +89,37 @@ a {
 .of-header-nav-item-href {
     text-transform: uppercase;
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 5px;
     font-weight: 700;
     font-size: 14px;
     padding: 0 20px;
     cursor: pointer;
     display: block;
     background-color: #fff;
-    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
-    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out;
-    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
 }
 
 .of-header-nav-item-href:hover {
     background-color: transparent;
+    border-radius: 20px;
     border-color: #fff;
     color: #fff;
 }
 
 .of-header-nav-item-right {
     margin: 0px;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 5px 5px 0;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+}
+
+.of-header-nav-item-right:hover {
+    border-radius: 0 20px 20px 0;
 }
 
 .of-header-nav-item-left {
@@ -138,7 +157,7 @@ a {
 .of-header-nav-item-button {
     text-transform: uppercase;
     border: 1px solid transparent;
-    border-radius: 4px 0 0 4px;
+    border-radius: 5px 0 0 5px;
     line-height: 50px;
     font-weight: 700;
     font-size: 14px;
@@ -146,15 +165,17 @@ a {
     cursor: pointer;
     color: red;
     background-color: #fff;
-    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
-    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out;
-    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .5s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .5s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .5s ease-in-out;
 }
 
 .of-header-nav-item-button:hover {
     background-color: transparent;
-    color: #fff;
+    border-radius: 20px 0 0 20px;
     border-color: #fff;
+    color: #fff;
 }
 
 
@@ -167,7 +188,7 @@ a {
     background-color: #fff;
     border-radius: 2px;
     padding: 50px 35px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .of-home-title {
@@ -197,17 +218,19 @@ a {
     padding: 0 25px;
     display: block;
     border: 1px solid transparent;
-    background: linear-gradient(135deg, rgba(168,78,0,1) 0%,rgba(100,64,143,1) 100%);
     color: #fff;
-    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
-    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out;
-    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+    background: linear-gradient(135deg, rgba(168,78,0,1) 0%,rgba(100,64,143,1) 100%);
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .25s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .25s ease-in-out;
 }
 
 .of-home-button-a:hover {
-    background: #FFF;
-    color: rgba(100,64,143,1);
     border: 1px solid rgba(100,64,143,1);
+    border-radius: 10px 0 0 10px;
+    color: rgba(100,64,143,1);
+    background: #FFF;
 }
 
 
@@ -220,7 +243,7 @@ a {
     background-color: #fff;
     border-radius: 2px;
     padding: 50px 35px;
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     height: calc(100vh - 150px - 60px);
     overflow-y: auto;
