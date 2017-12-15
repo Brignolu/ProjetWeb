@@ -6,7 +6,7 @@
 function user_signin($pseudo, $password, $c, $encryption_key) {
 //récupération des compte streamer
 	//cryptage du password
-	//$password = crypt($password,$encryption_key);
+	$password = crypt($password,$encryption_key);
 	$sql = ("SELECT * FROM users WHERE email='$pseudo' AND password='$password'");
 	$result = mysqli_query($c,$sql);
 
@@ -34,7 +34,7 @@ $result->close();
 //renvoi true si la connection a fonctionné sinon false
 function user_signup($fname, $lname, $adressepostal, $codepostal, $ville , $email, $password, $tel , $c, $encryption_key) {
 	//cryptage du password
-	//$password = crypt($password,$encryption_key);
+	$password = crypt($password,$encryption_key);
 	//insertion des valeurs dans la bdd
 	$sql = ("INSERT INTO users(fname, lname, adressepostal, codepostal, ville, email, password, tel) VALUES('$fname', '$lname', '$adressepostal', '$codepostal', '$ville', '$email', '$password', '$tel')");
 	if(mysqli_query($c,$sql)){

@@ -257,7 +257,6 @@ function ds_py() {
     // Decrease the current year.
     ds_c_year = ds_c_year - 1;               // Can't use dash-dash here, it will make the page invalid.
     ds_draw_calendar(ds_c_month, ds_c_year); // Redraw the calendar.
-;
 }
 
 // Format the date to output.
