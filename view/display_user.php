@@ -44,8 +44,7 @@ function display_hall_select($salles) {
 
 //prend un pseudo
 //affiche le pseudo
-function display_user_log($pseudo, $mail) {
-
+function display_user_log($reservations, $user_infos) {
     require "pages/user_log.php";
 
 }

@@ -46,6 +46,16 @@ function user_signup($fname, $lname, $adressepostal, $codepostal, $ville , $emai
 }
 
 
+function get_info_user_by_id($id, $c){
+    $sql = ("SELECT * FROM users WHERE id ='$id'");
+    $result = mysqli_query($c,$sql);
+    $user_info= array ();
+    if($row = mysqli_fetch_row($result)){
+        $user_info= $row;
+    }
+    return $user_info;
+
+}
 
 
 

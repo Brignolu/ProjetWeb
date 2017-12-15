@@ -10,7 +10,7 @@ elseif ($page == "attraction") {
     display_attraction();
 }
 if ($page == "user_log") {
-    display_user_log($_SESSION['pseudo'], $_SESSION['mail']);
+    display_user_log($reservations, $user_infos);
 }
 elseif (($page == "user_sub")) {
     display_user_sub();

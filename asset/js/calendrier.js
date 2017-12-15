@@ -128,7 +128,7 @@ function ds_template_creneau(c, d, m, y) {
         return '<td id="' + d + '/' + m + '/' + y + '/' + c + '" onclick="cs_onclick(' + c + ',' + d + ',' + m + ',' + y + ')" class="ds_cell">'+c+'</td> ';
 
     }
-    else return '<td id="' + d + '/' + m + '/' + y + '/' + c + '"  class="ds_cell" style="background-color: red">'+c+'</td> ';
+    else return '<td id="' + d + '/' + m + '/' + y + '/' + c + '"  class="ds_cell input-off">'+c+'</td> ';
 
 }
 

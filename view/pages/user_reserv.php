@@ -10,7 +10,6 @@
                     <select id="select" name="formule" oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
 
                         <?php
-                        var_dump($salle);
                         foreach ($formules as $formule) {
                           echo "<option id='" . $formule[0] . "'>
                                 " . $formule[1] . "
@@ -60,7 +59,7 @@
 
                 <li class="of-main-form-item-link">
                     <p>prix total</p>
-                    <input type='text' id='cost_result' value='0'>
+                    <input type='text' id='cost_result' name="total_cost" value='0'>
                 </li>
 
                 <li class="of-main-form-item-link">

@@ -25,7 +25,7 @@ if(isset($_GET["ac"])){
     //test de la reservation
     if($_GET["ac"]=="reserv"){
         $date = implode('-',array_reverse(explode('/',$_POST["date"])));
-        if(user_reserv($_SESSION['id'], $_POST['idformule'], $_POST['idsalle'], $_POST["fnameenfant"], $_POST["lnameenfant"], $_POST["age"], $date, $_POST["creneau"], $_POST["childnb"]+1, $_POST["adultnb"]+1, $_POST["drinknb"]+1, $_POST["cakenb"]+1,  $c, $encryption_key)){
+        if(user_reserv($_SESSION['id'], $_POST['idformule'], $_POST['idsalle'], $_POST["fnameenfant"], $_POST["lnameenfant"], $_POST["age"], $date, $_POST["creneau"], $_POST["childnb"]+1, $_POST["adultnb"]+1, $_POST["drinknb"]+1, $_POST["cakenb"]+1, $_POST["total_cost"],  $c, $encryption_key)){
             $page = "reserv_sucess";
         }
         else {
@@ -40,8 +40,9 @@ if(isset($_GET["ac"])){
 // Vérification si le user est enregister
 
 if(isset($_SESSION['stats']) and $page != "connection_failed" and $page != "sub_failed"){
-
     if(isset($_GET["user_log"])){
+        $reservations = get_reserv_by_user_id($_SESSION['id'], $c);
+        $user_infos = get_info_user_by_id($_SESSION['id'], $c);
         $page = "user_log";
     }
 }
@@ -92,5 +93,6 @@ if(isset($_GET["logout"])){
     user_logout();
     header('location: index.php');
 }
+
 
 

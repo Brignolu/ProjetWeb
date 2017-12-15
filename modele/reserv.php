@@ -19,11 +19,11 @@ function recup_all_reserv($c, $encryption_key){
 //script de reservation pour les user
 //ajoute dans la bdd les valeurs
 //renvoi true si la connection a fonctionné sinon false
-function user_reserv($iduser, $idformule, $idsalle, $fnameenfant, $lnameenfant, $age, $date, $creneau, $childnb, $adultnb, $drinknb, $cakenb, $c, $encryption_key) {
+function user_reserv($iduser, $idformule, $idsalle, $fnameenfant, $lnameenfant, $age, $date, $creneau, $childnb, $adultnb, $drinknb, $cakenb, $price, $c, $encryption_key) {
     //cryptage du password
     //$password = crypt($password,$encryption_key);
     //insertion des valeurs dans la bdd
-    $sql = ("INSERT INTO reservation(iduser, idformule, idsalle, fnameenfant, lnameenfant, age, reservdate, creneau, childnb, adultnb, drinknb, cakenb) VALUES('$iduser','$idformule','$idsalle' ,'$fnameenfant','$lnameenfant' ,'$age', '$date', '$creneau', '$childnb', '$adultnb', '$drinknb', '$cakenb')");
+    $sql = ("INSERT INTO reservation(iduser, idformule, idsalle, fnameenfant, lnameenfant, age, reservdate, creneau, childnb, adultnb, drinknb, cakenb, price) VALUES('$iduser','$idformule','$idsalle' ,'$fnameenfant','$lnameenfant' ,'$age', '$date', '$creneau', '$childnb', '$adultnb', '$drinknb', '$cakenb', '$price')");
     if(mysqli_query($c,$sql)){
         return true;
     }
@@ -31,3 +31,22 @@ function user_reserv($iduser, $idformule, $idsalle, $fnameenfant, $lnameenfant, 
         return false;
     }
 }
+
+function get_reserv_by_user_id($id, $c){
+    $sql = "SELECT reservation.id, reservation.reservdate, reservation.creneau, formules.name as formulesname, reservation.price as pricetotal, formules.price as priceunit, salles.nom as sallename, reservation.fnameenfant, reservation.lnameenfant, reservation.age, reservation.childnb, reservation.adultnb, reservation.drinknb, reservation.cakenb
+    FROM reservation, formules, salles
+    WHERE reservation.idformule = formules.id
+    AND reservation.idsalle = salles.id
+    AND reservation.iduser ='$id'";
+    $result = mysqli_query($c,$sql);
+    $loop = 0;
+    $reservations= array ();
+    while ($donnees = mysqli_fetch_assoc($result))
+    {
+        $reservations[$loop]= $donnees;
+        $loop++;
+    }
+    return $reservations;
+
+}
+
