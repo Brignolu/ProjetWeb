@@ -1,6 +1,8 @@
 <div class="of-container of-header">
 
-    <img class="of-header-logo" src="asset/img/Logo.png" alt="Logo Openfive">
+    <a href="index.php">
+        <img class="of-header-logo" src="asset/img/Logo.png" alt="Logo Openfive">
+    </a>
 
     <div class="of-header-nav">
         <form action="index.php?logout" method="post">
@@ -18,9 +20,9 @@
                 </li>
 
                 <li class="of-header-nav-item of-header-nav-item-title">
-                     <?php
-                        echo $_SESSION["pseudo"];
-                     ?>
+                    <?php
+                    echo $_SESSION["pseudo"];
+                    ?>
                 </li>
 
                 <li class="of-header-nav-item">

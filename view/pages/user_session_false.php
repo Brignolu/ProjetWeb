@@ -1,28 +1,32 @@
 <div class="of-container of-header">
 
-    <img class="of-header-logo" src="asset/img/Logo.png" alt="Logo Openfive">
+    <a href="index.php">
+        <img class="of-header-logo" src="asset/img/Logo.png" alt="Logo Openfive">
+    </a>
 
     <div class="of-header-nav">
         <form action="index.php?ac=signin" method="post">
             <ul>
                 <li class="of-header-nav-item">
                     <a href="index.php?attraction" class="of-header-nav-item-href">
-                            Attractions
+                        Attractions
                     </a>
                 </li>
 
                 <li class="of-header-nav-item">
                     <a href="index.php?propos" class="of-header-nav-item-href">
-                            A propos
+                        A propos
                     </a>
                 </li>
 
                 <li class="of-header-nav-item">
-                    <input type="text" class="of-header-nav-item-input" name="pseudo" placeholder="Identifiant" required>
+                    <input type="text" class="of-header-nav-item-input" name="pseudo" placeholder="Identifiant"
+                           required>
                 </li>
 
                 <li class="of-header-nav-item">
-                    <input type='text' class="of-header-nav-item-input" name="password" placeholder="Mot de passe" required>
+                    <input type='password' class="of-header-nav-item-input" name="password" placeholder="Mot de passe"
+                           required>
                 </li>
 
                 <li class="of-header-nav-item of-header-nav-item-left">
@@ -32,9 +36,9 @@
                 </li>
 
                 <li class="of-header-nav-item">
-                        <a href="index.php?subform" class="of-header-nav-item-href of-header-nav-item-right">
-                                Inscription
-                        </a>
+                    <a href="index.php?subform" class="of-header-nav-item-href of-header-nav-item-right">
+                        Inscription
+                    </a>
                 </li>
             </ul>
         </form>
