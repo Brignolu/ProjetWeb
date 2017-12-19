@@ -41,6 +41,7 @@ function get_reserv_by_user_id($id, $c){
     $result = mysqli_query($c,$sql);
     $loop = 0;
     $reservations= array ();
+
     while ($donnees = mysqli_fetch_assoc($result))
     {
         $reservations[$loop]= $donnees;
