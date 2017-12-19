@@ -7,7 +7,7 @@
     <link href="asset/css/reset.css" rel="stylesheet" type="text/css" />
     <link href="asset/css/style.css" rel="stylesheet" type="text/css" />
     <link href="asset/css/calendrier.css" rel="stylesheet" type="text/css" />
-
+    <script type="text/javascript" src="asset/js/pre_load.js"></script>
 </head>
 <body>
 

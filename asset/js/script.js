@@ -24,3 +24,5 @@ function cost_calculator(Tab, $nbmax) {
         document.getElementById("cost_result").value = "erreur de saisie";
     }
 }
+
+

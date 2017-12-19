@@ -55,8 +55,8 @@ function ds_echo(t) {
 var ds_element; // Text Element...
 
 var ds_monthnames = [
-    'Janvier', 'F?vrier', 'Mars', 'Avril', 'Mai', 'Juin',
-    'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'D?cembre'
+    'Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin',
+    'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'
 ]; // You can translate it for your language.
 
 var ds_daynames = [
