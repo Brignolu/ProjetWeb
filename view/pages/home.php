@@ -7,6 +7,7 @@
         <img class="of-slider" src="asset/img/slider2.jpg" style="width:100%">
         <img class="of-slider" src="asset/img/slider3.jpg" style="width:100%">
         <img class="of-slider" src="asset/img/slider4.jpg" style="width:100%">
+        <img class="of-slider" src="asset/img/slider5.jpg" style="width:100%">
     </div>
 
     <h3 class="of-home-subtitle">
