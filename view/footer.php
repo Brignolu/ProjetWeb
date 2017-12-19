@@ -1,6 +1,6 @@
 <footer class="of-container of-footer">
 
-    <h2>Simple, rapide, efficace.</h2>
+    <h2>OPENFIVE</h2>
     <span>copyright</span>
 
 </footer>

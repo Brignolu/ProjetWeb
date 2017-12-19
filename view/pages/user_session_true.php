@@ -1,7 +1,7 @@
 <div class="of-container of-header">
 
     <a href="index.php">
-        <img class="of-header-logo" src="asset/img/Logo.png" alt="Logo Openfive">
+        <img class="of-header-logo" src="asset/img/logoinverse.png" alt="Logo Openfive">
     </a>
 
     <div class="of-header-nav">
