@@ -2,6 +2,7 @@
     <h2 class="of-home-title">
         Accueil
     </h2>
+
     <div class="w3-content w3-section" >
         <img class="of-slider" src="asset/img/slider1.jpg" style="width:100%">
         <img class="of-slider" src="asset/img/slider2.jpg" style="width:100%">
@@ -24,5 +25,8 @@
         - Un accrobranche d'intérieur qui culmine à 8m
         Toutes ces attractions ont été conçues pour permettre aux parents d'accompagner leurs enfants, accès qui sera autorisé en fonction des pics d'affluence.
     </p>
-
+    <script>
+        var myIndex = 0;
+        slider();
+    </script>
 </div>
