@@ -2,7 +2,7 @@
 
 try
 {
-		$c = mysqli_connect("localhost", "root", "", "openfive");
+		$c = mysqli_connect("localhost", "root", "root", "openfive");
 }
 
 catch (Exception $e)

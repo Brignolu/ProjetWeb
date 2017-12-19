@@ -1,9 +1,9 @@
 
 
 
-/*********************************************************************************/
-/* Global                                                                        */
-/*********************************************************************************/
+/*********************************************************************************\
+ * Global                                                                        *
+\*********************************************************************************/
 
 
 * {
@@ -15,9 +15,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background: rgb(255,78,0);
-    background: -moz-linear-gradient(-45deg, rgba(255,78,0,1) 0%, rgba(229,19,86,1) 100%);
+    /* background: -moz-linear-gradient(-45deg, rgba(255,78,0,1) 0%, rgba(229,19,86,1) 100%);
     background: -webkit-linear-gradient(-45deg, rgba(255,78,0,1) 0%,rgba(229,19,86,1) 100%);
-    background: linear-gradient(135deg, rgba(168,78,0,1) 0%,rgba(100,64,143,1) 100%);
+    background: linear-gradient(135deg, rgba(168,78,0,1) 0%,rgba(100,64,143,1) 100%); */
+    background: url(../img/fond.jpg) no-repeat fixed ;
+    background-size: cover;
     font-size: 15px;
 }
 
@@ -27,14 +29,18 @@ a {
 }
 
 ::placeholder {
-    font-size: 12px;
+    font-size: 14px;
     color: gray;
 }
 
+.of-responsive{
 
-/*********************************************************************************/
-/* Container                                                                        */
-/*********************************************************************************/
+}
+
+
+/*********************************************************************************\
+ * Container                                                                     *
+\*********************************************************************************/
 
 
 .of-container {
@@ -43,9 +49,9 @@ a {
 }
 
 
-/*********************************************************************************/
-/* Header                                                                        */
-/*********************************************************************************/
+/*********************************************************************************\
+ * Header                                                                        *
+\*********************************************************************************/
 
 
 .of-header {
@@ -57,7 +63,7 @@ a {
     width: 150px;
     height: 140px;
     z-index: 1;
-    top: 10px;
+    top: 15px;
     left: 100px;
     position: absolute;
 }
@@ -75,55 +81,20 @@ a {
     color: white;
 }
 
+/*********************************************************************************\
+ * Header - NavBar                                                               *
+\*********************************************************************************/
+
+
 .of-header-nav {
     float: right;
     height: 50px;
 }
 
 .of-header-nav-item {
-    line-height: 50px;
+    line-height: 46px;
     margin-right: 10px;
     float: left;
-}
-
-.of-header-nav-item-href {
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 0 20px;
-    cursor: pointer;
-    display: block;
-    background-color: #fff;
-
-    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
-    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
-    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
-}
-
-.of-header-nav-item-href:hover {
-    background-color: transparent;
-    border-radius: 20px;
-    border-color: #fff;
-    color: #fff;
-}
-
-.of-header-nav-item-right {
-    margin: 0px;
-    border-radius: 0 5px 5px 0;
-
-    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
-    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
-    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
-}
-
-.of-header-nav-item-right:hover {
-    border-radius: 0 20px 20px 0;
-}
-
-.of-header-nav-item-left {
-    margin: 0px;
 }
 
 .of-header-nav-item-title {
@@ -141,30 +112,72 @@ a {
 }
 
 .of-header-nav-item-input {
-    background-color: transparent;
+    background-color: #EDE6CA;
     text-transform: uppercase;
-    border: 1px solid #e3e3e3;
-    line-height: 52px;
+    border: 2px solid #e3e3e3;
     border-radius: 4px;
-    height: 52px;
+    line-height: 46px;
+    height: 50px;
     width: 100%;
-    color: #fff;
+    color: #000;
     font-size: 12px;
     padding: 0 18px;
-    outline-color: darkred;
+    outline: none;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
 }
 
-.of-header-nav-item-button {
+.of-header-nav-item-input:focus {
+    background-color: #834E1C;
+    border-radius: 20px;
+    border-color: #fff;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+}
+
+.of-header-nav-item-href {
     text-transform: uppercase;
-    border: 1px solid transparent;
-    border-radius: 5px 0 0 5px;
-    line-height: 50px;
+    border: 2px solid #663125 ;
+    border-radius: 5px;
     font-weight: 700;
     font-size: 14px;
     padding: 0 20px;
     cursor: pointer;
-    color: red;
-    background-color: #fff;
+    display: block;
+    height: 50px;
+    line-height: 46px;
+    color: #555;
+    background-color: #EDE6CA;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+}
+
+.of-header-nav-item-href:hover {
+    background-color: #834E1C;
+    border-radius: 20px;
+    border-color: #fff;
+    color: #fff;
+}
+
+.of-header-nav-item-button {
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 5px 0 0 5px;
+    border-right-style: none;
+    line-height: 46px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #834E1C;
 
     -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .5s ease-in-out;
     -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .5s ease-in-out;
@@ -172,16 +185,34 @@ a {
 }
 
 .of-header-nav-item-button:hover {
-    background-color: transparent;
+    background-color: #EDE6CA;
     border-radius: 20px 0 0 20px;
-    border-color: #fff;
-    color: #fff;
+    border-color: #663125;
+    color: #663125;
+}
+
+.of-header-nav-item-right {
+    margin: 0px;
+    border-radius: 0 5px 5px 0;
+    border-left-style: none;
+
+    -webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, border-radius .65s ease-in-out;
+}
+
+.of-header-nav-item-right:hover {
+    border-radius: 0 20px 20px 0;
+}
+
+.of-header-nav-item-left {
+    margin: 0px;
 }
 
 
-/*********************************************************************************/
-/* Home                                                                   */
-/*********************************************************************************/
+/*********************************************************************************\
+ * Home                                                                          *
+\*********************************************************************************/
 
 
 .of-home {
@@ -234,18 +265,19 @@ a {
 }
 
 
-/*********************************************************************************/
-/* Main                                                                */
-/*********************************************************************************/
+/*********************************************************************************\
+ * Main                                                                          *
+\*********************************************************************************/
+
 
 
 .of-main {
     background-color: #fff;
     border-radius: 2px;
     padding: 50px 35px;
-    margin-top: 60px;
+    margin-top: 80px;
     display: flex;
-    height: calc(100vh - 150px - 60px);
+    height: calc(100vh - 230px - 10px);
     overflow-y: auto;
 }
 
@@ -356,9 +388,9 @@ a {
 }
 
 
-/*********************************************************************************/
-/* Footer                                                               */
-/*********************************************************************************/
+/*********************************************************************************\
+ * Footer                                                                        *
+\*********************************************************************************/
 
 
 .of-footer {
