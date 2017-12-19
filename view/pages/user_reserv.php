@@ -1,4 +1,4 @@
-<div class="of-container of-main">
+<div class="of-container of-main-reservation">
 
     <h2 class="of-main-title2">Réservation :</h2>
 
