@@ -57,7 +57,6 @@
             </li>
 
             <li class="of-main-form-item">
-                <p>prix total</p>
                 <input class="of-main-form-item-link" type='text' id='cost_result' name="total_cost" value='0'>
             </li>
 
