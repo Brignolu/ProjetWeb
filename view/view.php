@@ -7,7 +7,7 @@ elseif ($page == "propos") {
     display_apropos();
 }
 elseif ($page == "attraction") {
-    display_attraction();
+    display_attraction($attractions);
 }
 if ($page == "user_log") {
     display_user_log($reservations, $user_infos);

@@ -64,6 +64,7 @@ if(isset($_GET["propos"])){
 // Page Attraction
 
 if(isset($_GET["attraction"])){
+    $attractions=recup_all_attraction($c, $encryption_key);
     $page = "attraction";
 }
 //formulaire de reservation

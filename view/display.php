@@ -12,7 +12,7 @@ function display_apropos(){
 
 }
 
-function display_attraction(){
+function display_attraction($attractions){
 
     require ("pages/attraction.php");
 
