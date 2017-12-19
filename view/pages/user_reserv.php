@@ -37,23 +37,23 @@
             </li>
 
             <li class="of-main-form-item">
-                <input class="of-main-form-item-link" placeholder="Nombre d'enfant supplémentaire" id="enfant" type="number" name="childnb" required/>
-                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
+                <input class="of-main-form-item-link" placeholder="Nombre d'enfant supplémentaire" id="enfant" type="number" name="childnb"
+                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" required/>
             </li>
 
             <li class="of-main-form-item">
-                <input class="of-main-form-item-link" placeholder="Nombre d'adultes supplémentaire" id="adult" type="number" name="adultnb" required/>
-                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
+                <input class="of-main-form-item-link" placeholder="Nombre d'adultes supplémentaire" id="adult" type="number" name="adultnb"
+                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" required/>
             </li>
 
             <li class="of-main-form-item">
-                <input class="of-main-form-item-link" placeholder="Boisson Supplémentaire" id="drink" type="number" name="drinknb" required/>
-                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
+                <input class="of-main-form-item-link" placeholder="Boisson Supplémentaire" id="drink" type="number" name="drinknb"
+                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" required/>
             </li>
 
             <li class="of-main-form-item">
-                <input class="of-main-form-item-link" placeholder="Voulez-vous un gateau supplémentaires?" id="cake" type="number" name="cakenb" required/>
-                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)">
+                <input class="of-main-form-item-link" placeholder="Voulez-vous un gateau supplémentaires?" id="cake" type="number" name="cakenb"
+                       oninput="cost_calculator(Formules, <?php echo $salle[2]; ?>)" required/>
             </li>
 
             <li class="of-main-form-item">
