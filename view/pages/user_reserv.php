@@ -64,7 +64,7 @@
                         Prix total :
                     </h2>
 
-                    <input class="of-main-form-item-link" type='text' id='cost_result' name="total_cost" value='0' disabled>
+                    <input class="of-main-form-item-link" type='text' id='cost_result' name="total_cost" value='0'>
                 </li>
 
                 <li class="of-main-form-item">
