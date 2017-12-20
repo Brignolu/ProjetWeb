@@ -18,7 +18,7 @@ body {
     /* background: -moz-linear-gradient(-45deg, rgba(255,78,0,1) 0%, rgba(229,19,86,1) 100%);
     background: -webkit-linear-gradient(-45deg, rgba(255,78,0,1) 0%,rgba(229,19,86,1) 100%);
     background: linear-gradient(135deg, rgba(168,78,0,1) 0%,rgba(100,64,143,1) 100%); */
-    background: url(https://static1.squarespace.com/static/532675b0e4b09e6559091b92/t/57155b071bbee0fbd857a640/1461017354202/pirate-bg-images3a.jpg) no-repeat fixed ;
+    background: url(../img/background.jpg) no-repeat fixed ;
     background-size: cover;
     font-size: 15px;
 }
@@ -577,7 +577,25 @@ a {
 
 
 .of-main-form-button-invalid {
-    cursor: none;
+    border: 2px solid #1E0D06;
+    border-radius: 5px;
+    line-height: 46px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 50px;
+    color: #555;
+    background-color: #fff;
+
+    transition: none;
+}
+
+.of-main-form-button-invalid:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: #1E0D06;
+    color: #555;
 }
 
 .of-main-form-button-valid {
