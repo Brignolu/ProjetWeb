@@ -2,20 +2,27 @@
     <form action="index.php?reservform=reserv" method="post">
         <div class="block-salle">
             <?php
+            $i = 1;
+
             foreach ($salles as $salle) {
                 echo '<div class="of-main-block-salle">';
                 echo '<h2 class="of-main-block-salle-title">Salle ' . $salle[1] . '</h2>';
-                echo "<p class='of-img-description'>Nombre d'enfant:  " . $salle[2] . "</p>";
-                echo '<p class="of-img-description"> Selectionner cette salle </p>';
-                echo '<input type="radio" name="hall-choice" value="' . $salle[0] . '">';
-                echo '<br>';
-                echo '<img src="' . $salle[3] . '" alt="sa marche pas" height="30%" width="30%" >';
+                echo '<img class="of-img-salle" src="' . $salle[3] . '" alt="sa marche pas" height="30%" width="30%" >';
+                echo "<p class='of-main-block-salle-nbenfant'>Nombre d'enfant:  " . $salle[2] . "</p>";
+                echo '<p class="of-main-block-salle-select"> Selectionner cette salle </p>';
+                if ($i == 1) {
+                    echo '<input class="of-main-block-salle-radio" type="radio" name="hall-choice" checked="checked" value="' . $salle[0] . '">';
+                    $i = 0;
+                }else {
+                    echo '<input class="of-main-block-salle-radio" type="radio" name="hall-choice" value="' . $salle[0] . '">';
+                }
                 echo '</div>';
             }
             ?>
-        </div>
-        <div class="div_menu_line">
-            <input type='submit' class='button' value='valider' name='subscribe'>
+
+            <div>
+                <input class="of-main-button-item" type='submit' class='button' value='valider' name='subscribe'>
+            </div>
         </div>
     </form>
 </div>

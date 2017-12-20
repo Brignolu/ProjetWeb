@@ -1,4 +1,4 @@
-<div class="of-container of-main">
+<div class="of-container of-main of-main-connection">
     <div class="of-main-containe">
         <div class="of-main-title">
             <h2>Connexion Réussi.</h2>

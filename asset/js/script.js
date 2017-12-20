@@ -11,7 +11,8 @@ function cost_calculator(Tab, $nbmax) {
         for (i = 0; i < Tab.length; i++) {
             if (select == Tab[i][1]) {
                 document.getElementById("submit_button").disabled = false;
-                document.getElementById("submit_button").style.backgroundColor = "green";
+                document.getElementById("submit_button").classList.add('of-main-form-button-valid');
+                document.getElementById("submit_button").classList.remove('of-main-form-button-invalid');
                 document.getElementById("cost_result").value = ((Tab[i][2] * enfant) + drink + adult + cake);
                 document.getElementById("idformule").value = Tab[i][0];
 
@@ -20,7 +21,8 @@ function cost_calculator(Tab, $nbmax) {
     }
     else{
         document.getElementById("submit_button").disabled = true;
-        document.getElementById("submit_button").style.backgroundColor = "red";
+        document.getElementById("submit_button").classList.add('of-main-form-button-invalid');
+        document.getElementById("submit_button").classList.remove('of-main-form-button-valid');
         document.getElementById("cost_result").value = "erreur de saisie";
     }
 }

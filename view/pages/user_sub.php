@@ -1,6 +1,6 @@
-<div class="of-container of-main">
+<div class="of-container of-main of-main-inscription">
     <form action="index.php?ac=signup" method="post" class="of-main-form">
-        <ul class="of-main-form-ul">
+        <ul>
             <li class="of-main-form-item">
                 <input class="of-main-form-item-link" type="text" name='email' placeholder='Adresse e-mail' required/>
             </li>
