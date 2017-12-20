@@ -7,7 +7,7 @@
             foreach ($salles as $salle) {
                 echo '<div class="of-main-block-salle">';
                 echo '<h2 class="of-main-block-salle-title">Salle ' . $salle[1] . '</h2>';
-                echo '<img class="of-img-salle" src="' . $salle[3] . '" alt="sa marche pas" height="30%" width="30%" >';
+                echo '<img class="of-img-salle" src="' . $salle[3] . '" alt="sa marche pas">';
                 echo "<p class='of-main-block-salle-nbenfant'>Nombre d'enfant:  " . $salle[2] . "</p>";
                 echo '<p class="of-main-block-salle-select"> Selectionner cette salle </p>';
                 if ($i == 1) {

@@ -43,6 +43,13 @@
 	background-color: #F3F3F3;
 } /* This hover code won't work for IE */
 
-.input-of {
+.input-off {
+	background-color: #1E0D06;
+	color: #fff;
+}
 
+.input-off:hover {
+	background-color: #1E0D06;
+	color: #fff;
+	cursor: default;
 }
