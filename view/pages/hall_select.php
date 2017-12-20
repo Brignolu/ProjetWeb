@@ -1,4 +1,4 @@
-<div class="of-container of-main-reservation">
+<div class="of-container of-main-reservation-salle">
     <form action="index.php?reservform=reserv" method="post">
         <div class="block-salle">
             <?php

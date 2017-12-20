@@ -215,11 +215,8 @@ a {
 
 
 .of-home {
-    background-color: #F5BE6B;
-    width: 500px;
-    border-radius: 2px;
-    padding: 50px 35px;
-    margin: 80px auto;
+    width: 400px;
+    margin-top: 60px;
 }
 
 .of-home-title {
@@ -275,20 +272,30 @@ a {
     background-color: #fff;
     border-radius: 2px;
     padding: 30px 20px;
-    margin: 50px 0 0 100px;
+    margin: 50px 0 0 140px;
     display: flex;
     width: 900px;
 }
 
 .of-main-attraction {
     background-color: transparent;
-    border-radius: 2px;
     padding: 30px 20px;
-    margin: 30px 0 0 50px;
+    margin: 30px 0 0 80px;
     display: flex;
 }
 
-.of-main-reservation {
+.of-main-perso {
+    background-color: transparent;
+    padding: 20px;
+}
+
+.of-main-reservation-salle {
+    padding: 30px 20px;
+    margin: 50px 0 0 140px;
+    width: 900px;
+}
+
+.of-main-reservation-anniv {
     background: url(../img/fond.jpg) no-repeat;
     box-shadow: 10px 10px 20px 0px;
     background-size: 100% 100%;
@@ -304,12 +311,24 @@ a {
     width: 45%;
     float: left;
     margin: 0 5%;
+    background: url(../img/fond.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-shadow: 10px 10px 20px 0px;
 }
 
 .of-main-2 {
     width: 45%;
     float: right;
     margin: 0 5%;
+    background: url(../img/fond.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-shadow: 10px 10px 20px 0px;
 }
 
 .of-main-containe {
@@ -335,7 +354,6 @@ a {
     padding: 10px;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 30px;
 }
 
 .of-main-salle {
@@ -441,7 +459,7 @@ a {
 .of-footer {
     text-align: center;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
     height: 100px;
     color: #000;
 }
@@ -450,12 +468,6 @@ a {
 /*********************************************************************************/
 /* Images                                                                        */
 /*********************************************************************************/
-
-
-.of-slider {
-    display:none;
-
-}
 
 
 
@@ -477,9 +489,38 @@ a {
     margin-top: 20px;
 }
 
+.of-main-table-reserv{
+    margin: 20px auto;
+}
 
+.tabReserv{
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+}
+.of-main-table-reserv-ligne-item {
+    color: #600;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 8px 5px 8px 5px;
+    margin: 30px;
+    text-align: center;
+    border: 1px solid;
+}
 
+.of-main-table-reserv-ligne-item-th {
+    padding: 10px;
+}
 
+.of-slider {
+    display: none;
+    height: 400px;
+    width: 400px;
+    margin-left: 50px;
+    box-shadow: 10px 10px 20px 1px;
+}
 
 
 

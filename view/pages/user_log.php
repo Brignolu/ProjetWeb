@@ -1,53 +1,71 @@
-<div class="of-container of-main">
+<div class="of-container of-main of-main-perso">
     <div class="of-main-1">
         <h2 class="of-main-title-h2">
-            vos reservations
+            Vos réservations :
         </h2 class="of-main-corps">
-        <table>
-        <?php
-        foreach ($reservations as $reservation) {
-            echo"<tr>";
-            echo "<td>".$reservation['id']."</td>
-            <td>".$reservation['reservdate']."</td>
-            <td>".$reservation['creneau']."</td>
-            <td>".$reservation['formulesname']."</td>
-            <td>".$reservation['pricetotal']."</td>";
-            echo"</tr>";
-        }
 
-        ?>
+        <table class="of-main-table-reserv">
+            <tr class="of-main-table-reserv-ligne">
+                <th class="of-main-table-reserv-ligne-item-th">Date</th>
+                <th class="of-main-table-reserv-ligne-item-th">Creneau</th>
+                <th class="of-main-table-reserv-ligne-item-th">Formule</th>
+                <th class="of-main-table-reserv-ligne-item-th">Prix</th>
+            </tr>
+
+            <?php
+            foreach ($reservations as $reservation) {
+                echo "<tr>";
+                echo "<td  class='of-main-table-reserv-ligne-item'>" . $reservation['reservdate'] . "</td>
+                      <td  class='of-main-table-reserv-ligne-item'>" . $reservation['creneau'] . "</td>
+                      <td  class='of-main-table-reserv-ligne-item'>" . $reservation['formulesname'] . "</td>
+                      <td  class='of-main-table-reserv-ligne-item'>" . $reservation['pricetotal'] . "</td>";
+                echo "</tr>";
+            }
+            ?>
         </table>
     </div>
 
     <div class="of-main-2">
+
         <h2 class="of-main-title-h2">
-            dfh
+            Compte :
         </h2>
 
-        <table>
+        <table class="of-main-table-reserv">
+
             <?php
-            echo"
-            <td>".$user_infos[0]."</td>
-            <td>".$user_infos[1]."</td>
-            <td>".$user_infos[2]."</td>
-            <td>".$user_infos[3]."</td>
-            <td>".$user_infos[4]."</td>
-            <td>".$user_infos[5]."</td>
-            <td>".$user_infos[6]."</td>";
-                echo"</tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Prénom :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[1] . "</td>
+                    </tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Nom :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[2] . "</td>
+                    </tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Email :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[6] . "</td>
+                    </tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Tel :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[8] . "</td>
+                    </tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Adresse :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[3] . "</td>
+                    </tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Code Postal :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[4] . "</td>
+                    </tr>";
+            echo "<tr>
+                        <th class='tabReserv'>Ville :</th>
+                        <td class='of-main-table-reserv-ligne-item'>" . $user_infos[5] . "</td>
+                    </tr>";
 
 
             ?>
         </table>
-
-        <h2 class="of-main-title-h2">
-            dfh
-        </h2>
-
-        <p class="of-main-corps">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto esse excepturi repudiandae sed veniam! Ab accusantium aliquam assumenda cupiditate dicta dignissimos dolorem, harum magni natus nulla quam quos reprehenderit, veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto esse excepturi repudiandae sed veniam! Ab accusantium aliquam assumenda cupiditate dicta dignissimos dolorem, harum magni natus nulla quam quos reprehenderit, veritatis!
-        </p>
     </div>
 
 </div>
